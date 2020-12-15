@@ -77,6 +77,8 @@ RUN set -ex; \
   \
   tar -xf flink.tgz --strip-components=1; \
   rm flink.tgz; \
+  mkdir ./plugins/oss-fs-hadoop; \
+  cp ./opt/flink-oss-fs-hadoop-1.12.0.jar ./plugins/oss-fs-hadoop/; \
   \
   chown -R flink:flink .;
 
